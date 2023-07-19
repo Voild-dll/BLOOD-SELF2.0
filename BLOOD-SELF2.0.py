@@ -565,7 +565,7 @@ Logged as - {client.user}
 Windows version - {uname.release}
 SelfBot release - {Selfbot.__release__}
 ```""")
-    await ctx.send(f""" Download here - https://github.com/Voild-dll/BLOOD-SELF """)
+    await ctx.send(f""" Download here - https://github.com/Voild-dll/BLOOD-SELF2.0 """)
 
 @client.event
 async def on_error():
