@@ -1,35 +1,56 @@
 import os
 from os import system
 
+from os import system
+
+import sys,time,random
+
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.01)
+
 try:
    import time
 except:
     os.system('pip install time')
 from time import sleep
+try:
+    import colorama
+except:
+    os.system('pip install colorama')
+
+from colorama import Fore, init
 print("BLOOD-SELF 2.0 Beta")
 time.sleep(1)
-print("Developer - t.me/VoildZero from RL")
+print("Developer - Morg")
 time.sleep(1)
-print("███████████████████████████████████████████████████████████████████████████████████████████████████████████ ")
+print(f'{Fore.BLUE}███████████████████████████████████████████████████████████████████████████████████████████████████████████')
 print("                                                                                                            ")
-print("███    ██ ██    ██ ██   ██ ███████       ████████ ██   ██ ███████        ██████  ██████  ██████  ██████  ██ ")
-print("████   ██ ██    ██ ██  ██  ██               ██    ██   ██ ██            ██      ██    ██ ██   ██ ██   ██ ██ ")
-print("██ ██  ██ ██    ██ █████   █████   █████    ██    ███████ █████   █████ ██      ██    ██ ██████  ██   ██ ██ ")
-print("██  ██ ██ ██    ██ ██  ██  ██               ██    ██   ██ ██            ██      ██    ██ ██   ██ ██   ██    ")
-print("██   ████  ██████  ██   ██ ███████          ██    ██   ██ ███████        ██████  ██████  ██   ██ ██████  ██ ")
+print(f'{Fore.BLUE}███    ██ ██    ██ ██   ██ ███████       ████████ ██   ██ ███████        ██████  ██████  ██████  ██████  ██')
+print(f'{Fore.BLUE}████   ██ ██    ██ ██  ██  ██               ██    ██   ██ ██            ██      ██    ██ ██   ██ ██   ██ ██')
+print(f'{Fore.BLUE}██ ██  ██ ██    ██ █████   █████   █████    ██    ███████ █████   █████ ██      ██    ██ ██████  ██   ██ ██')
+print(f'{Fore.BLUE}██  ██ ██ ██    ██ ██  ██  ██               ██    ██   ██ ██            ██      ██    ██ ██   ██ ██   ██   ')
+print(f'{Fore.BLUE}██   ████  ██████  ██   ██ ███████          ██    ██   ██ ███████        ██████  ██████  ██   ██ ██████  ██')
 print("                                                                                                            ")
-print("███████████████████████████████████████████████████████████████████████████████████████████████████████████ ")
+print(f'{Fore.BLUE}███████████████████████████████████████████████████████████████████████████████████████████████████████████')
 print("                                                                                                            ")
-print("Initializing discord.py...")
+print_slow(f'{Fore.GREEN}Initializing discord.py...')
+print()
 time.sleep(0.5)
-print("Initializing colorama.py...")
+print_slow("Initializing colorama.py...")
+print()
 time.sleep(0.5)
-print("Initializing asyncio.py...")
+print_slow("Initializing asyncio.py...")
+print()
 time.sleep(0.5)
-print("Initializing aiohttp.py...")
+print_slow("Initializing aiohttp.py...")
+print()
 time.sleep(0.5)
-print("Initializing BLOOD-SELF 2.0...")
-time.sleep(0.5)
+print_slow("Initializing BLOOD-SELF 2.0...")
+print()
+time.sleep(0.05)
 
 import os
 from os import system
@@ -129,6 +150,8 @@ try:
     import logging
 except:
     os.system('pip install logging')
+    
+import atexit
 
 import platform,socket,re,uuid,json,psutil,logging
 from subprocess import Popen
@@ -143,33 +166,39 @@ import asyncio
 import aiohttp
 from time import strftime, gmtime, sleep
 from sys import stdout
+from logging.config import dictConfig
 try:
     import requests 
 except:
     os.system('pip install requests')
+    
+try:
+    import httpx 
+except:
+    os.system('pip install httpx')
 
 class Selfbot():
-    __version__ = "2.0 Beta"
-    __developers__ = ["Developer - t.me/VoildZero"]
-    __devmode__ = "Disaled"
+    __version__ = "2.1"
+    __developers__ = ["Developer - Morg"]
+    __devmode__ = "Disabled"
     __release__ = "Stable"
+    
 	
 with open('token.txt', 'r') as file:
     token = file.read()
 
 
-application_id = 1120677993359097938
+application_id = 
 
 prefix = ';'
+
+password = "" #Your account password here
 
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix = prefix, self_bot = True, intents=intents)
 client.remove_command('help')
 splink = 'BloodNuked'
 
-
-def getSystemInfo():
-    info={}
 
 def time4logs():
     return f'{datetime.datetime.now().strftime("%H:%M:%S")}'
@@ -178,43 +207,45 @@ def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(0.001)
 
 
 with open('bloodself.png', 'rb') as foto:
     avatar = foto.read()
 
-
 prevv = f"""
   ╔══════════■══════════╗     ▄▄▄▄    ██▓     ▒█████   ▒█████  ▓█████▄   ██████ ▓█████  ██▓      █████▒   ╔══════════■══════════╗
   I don't wanna live forever  ▓█████▄ ▓██▒    ▒██▒  ██▒▒██▒  ██▒▒██▀ ██▌▒██    ▒ ▓█   ▀ ▓██▒    ▓██   ▒     - Bloodself {Selfbot.__version__}
   I just wanna die a king     ▒██▒ ▄██▒██░    ▒██░  ██▒▒██░  ██▒░██   █▌░ ▓██▄   ▒███   ▒██░    ▒████ ░     - Login complete!
-  I don't wanna live forever  ▒██░█▀  ▒██░    ▒██   ██░▒██   ██░░▓█▄   ▌  ▒   ██▒▒▓█  ▄ ▒██░    ░▓█▒  ░     - t.me/VoildZero
-  I just wanna die a king     ░▓█  ▀█▓░██████▒░ ████▓▒░░ ████▓▒░░▒████▓ ▒██████▒▒░▒████▒░██████▒░▒█░        - https://discord.gg/G38QjaYPCy
-  I don't wanna live forever  ░▒▓███▀▒░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░▒░▒░  ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░▓  ░ ▒ ░        - voild_official on discord
+  I don't wanna live forever  ▒██░█▀  ▒██░    ▒██   ██░▒██   ██░░▓█▄   ▌  ▒   ██▒▒▓█  ▄ ▒██░    ░▓█▒  ░     - /
+  I just wanna die a king     ░▓█  ▀█▓░██████▒░ ████▓▒░░ ████▓▒░░▒████▓ ▒██████▒▒░▒████▒░██████▒░▒█░        - /
+  I don't wanna live forever  ░▒▓███▀▒░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░▒░▒░  ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░▓  ░ ▒ ░        - /
   I just wanna die a king     ▒░▒   ░ ░ ░ ▒  ░  ░ ▒ ▒░   ░ ▒ ▒░  ░ ▒  ▒ ░ ░▒  ░ ░ ░ ░  ░░ ░ ▒  ░ ░          - Full version
       "NUKE THE CORD"         ░    ░   ░ ░   ░ ░ ░ ▒  ░ ░ ░ ▒   ░ ░  ░ ░  ░  ░     ░     ░ ░    ░ ░            "NUKE THE CORD" 
   ╚══════════■══════════╝               ░  ░    ░ ░      ░ ░     ░          ░     ░  ░    ░  ░            ╚══════════■══════════╝   
-                                   ░                            ░                               
+
 """
-def startprint():
-    os.system('CLS')
-    print(Fore.RED + prevv)
-    print(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
+def startprint():                                                                                                                                                         
+    os.system('CLS')                                                                                                                                                                      
+    print(Fore.RED + prevv)                                                                                                                                               
+    print_slow(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
     print()
     print_slow(f'{Fore.GREEN} ({time4logs()}) | INFO | Logged as {client.user}{Fore.RESET}')
     print()
     print_slow(f'{Fore.GREEN} ({time4logs()}) | INFO | Selfbot running with version {Selfbot.__version__}{Fore.RESET}')
-    
+    print()
+    print_slow(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
+
 @client.event
 async def on_ready():
+    await client.user.edit(avatar=avatar, password=password)
     await client.change_presence(
-        status=discord.Status.online, 
+        status=discord.Status.do_not_disturb, 
         activity=discord.Activity(
             type=discord.ActivityType.streaming,
             application_id = application_id,
             details = "BLOOD-SELF 2.0 beta",
-            state="Kernel Panic ⚠",
+            state="Kill me :3 ⚠",
             name = "Blood-self 2.0",
         assets = {
             'large_image' : "1120695317944336424",
@@ -236,28 +267,32 @@ async def help(ctx):
             BLOOD-SELF help command
 
 
-
 [required argument] <optional argument>
 
 {prefix}status
 {prefix}ping
 {prefix}reload
-{prefix}destroy
+{prefix}destroy(x) 
 {prefix}kick [user mention] [time] [reason]
 {prefix}ban [user mention] [reason]
 {prefix}kill_emoji
-{prefix}admin_all
+{prefix}admin_all - give all members admin role
 {prefix}killchannels
-{prefix}leave
-{prefix}logout
-{prefix}nitrogen
+{prefix}leave - leaves current guild
+{prefix}logout - logouts selfbot from current account
+{prefix}nitrogen(x)
 {prefix}spam [quantity] <spam text>
 {prefix}support
-{prefix}ddos
+{prefix}ddos - [spam text] - spams in all channels
 {prefix}nuke
 {prefix}cinfo - info about ur PC
 {prefix}version - selfbot version
-
+{prefix}dmserver - [messege] dm all current server members 
+{prefix}dmfriends - [messege] dms only ur friend
+{prefix}dm - [messege] dm's all ur dms list
+{prefix}guildleave - leave ar ur servers
+{prefix}guildremove - remove all ur servers 
+{prefix}dmclean - clear all dm's
 ```""")
 
 @client.command()
@@ -267,10 +302,10 @@ async def status(ctx, argument=None, *, names='BLOOD-SELF'):
         await client.change_presence(activity=discord.Streaming(name=names, description = "BLOOD-SELF", state="2.0", url='https://twitch.tv/unknownpage'))
         await ctx.message.add_reaction('✅')
     elif argument == 'watch':
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=names, description="blood-self", state="https://discord.gg/G38QjaYPCy"))
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=names, description="blood-self", state="/"))
         await ctx.message.add_reaction('✅')
     elif argument == 'listen':
-        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=names, description="blood-selfbot", state="https://discord.gg/G38QjaYPCy"))
+        await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=names, description="blood-selfbot", state="/"))
         await ctx.message.add_reaction('✅')
     elif argument == 'play':
         await client.change_presence(activity=discord.Game(name=names, description="blood?", state="self"))
@@ -309,12 +344,12 @@ async def status(ctx, argument=None, *, names='BLOOD-SELF'):
                 type=discord.ActivityType.listening,
                 application_id = application_id,
                 details = "Blood Self",
-                state='https://discord.gg/G38QjaYPCy',
+                state='',
                 name = "Spotify",
                 album_cover_url='https://open.spotify.com/track/61BaxM1NIcadLu3gtWm2uT?si=dOe8iNSzR2K5xNeNqDGJZg&utm_source=copy-link',
             assets = {
                 'large_image' : "1120695317944336424",
-                'large_text':'https://discord.gg/G38QjaYPCy',
+                'large_text':'',
                 'small_image': "1120684679503294474"
             },
             timestamps = {
@@ -356,19 +391,8 @@ async def reload(ctx):
      
 	 	 
 @client.command()
-async def stopspam(ctx):
-    global spam
-    spam = False
-    await ctx.message.add_reaction('✅')
-    await client.close()
-
-@client.command()
 async def destroy(ctx):
-   await ctx.message.add_reaction('✅')
-   await ctx.send(f"""```\n Nuker started...✅```""")
-   print(f"{Fore.RED}({time4logs()}) Nuker started...")
-   Popen('python BLOOD-ServerNuker.py')
-   os.system('CLS')
+    await ctx.send(f"""```Only in vip version!```""")
 
 @client.command()
 @commands.has_permissions(ban_members = True)
@@ -450,24 +474,19 @@ os.system('CLS')
 
 @client.command()    
 async def nitrogen(ctx):
-	 await ctx.send(f"""```BLOOD-SELF\n\nNitro generator runned...✅```""")
-	 print(f"{Fore.RED}({time4logs()}) Nitro generator runned...")
-	 Popen('python NitroGen.py')
-	 os.system('CLS')
+	 await ctx.send(f"""```Only in vip version!```""")
 	 
 @client.command()
 async def support(ctx):
     await ctx.send(f"""```
 Links -
-Supporters: (https://discord.gg/G38QjaYPCy)
-Support link (for help): https://t.me/VoildZero
+Supporters: 
+Support link (for help): 
 Special thanks: __morg__ on discord, St3klo#7725 on discord, devyatka_ on discord
 Warning -
-This selfbot created by VoildZero on telegram or voild_official on discord, made special for RL server
+This selfbot created by - on telegram or - on discord.
 and if after using this selfbot u ar getting banned is not my problem! Good Luck!
 Support me:
-BTC - bc1q2928zrhsuwz7dpz7jywqg3ahktd3y56rag8jfw
-Qiwi - soon
 ```""")
 
 @client.command()
@@ -507,14 +526,14 @@ async def nuke(ctx):
 
     while True:
         try:
-            r = await ctx.guild.create_role(name=f'Crash by Voild {random.randint(1, 1000)}')
+            r = await ctx.guild.create_role(name=f'Crash by  {random.randint(1, 1000)}')
         except Exception as e:
             print(e)
 
 
     for ch in ctx.guild.channels:
         try:
-            await ch.edit(name=f'Crash by Voild {random.randint(1, 1000)}')
+            await ch.edit(name=f'Crash by  {random.randint(1, 1000)}')
         except Exception as e:
             print(e)
             
@@ -565,13 +584,152 @@ Logged as - {client.user}
 Windows version - {uname.release}
 SelfBot release - {Selfbot.__release__}
 ```""")
-    await ctx.send(f""" Download here - https://github.com/Voild-dll/BLOOD-SELF2.0 """)
+    await ctx.send(f""" Download here -  """)
+    
+@client.command()
+async def dmserver(ctx, custom):
+    for i in ctx.guild.members:
+        try: 
+            await i.send(custom)
+            print(f'{Fore.GREEN}LOG | Sent to {i}')
+        except:
+            print(f'{Fore.RED}LOG | {i} has closed dm')
+            
+@client.command()
+async def dm(ctx, *, text):
+    for user in client.private_channels:
+        try:
+            await user.send(text)
+            print(f'{Fore.GREEN}LOG | Sent to {user}')
+        except:
+            print(f'{Fore.RED}LOG | {user} has closed dm')
+
+@client.command()
+async def dmfriends(ctx, *, text):
+    for user in client.user.friends:
+        try:
+            await user.send(text)
+            print(f'{Fore.GREEN}LOG | Sent to {user}')
+        except:
+            print(f'{Fore.RED}LOG | {user} has closed dm')
+
+        
+@client.command()
+async def guildleave(ctx):
+    for guild in client.guilds:
+        try: 
+             await guild.leave()
+             print(f"{Fore.GREEN}Server leaved")
+        except:
+            print(f"{Fore.RED}Cannot remove leaved")
+            
+@client.command()
+async def guildremove(ctx):
+    for guild in client.guilds:
+        try: 
+             await guild.delete()
+             print(f"{Fore.GREEN}Server removed")
+        except:
+            print(f"{Fore.RED}Cannot remove server")
+            
+@client.command()
+async def dmclean(ctx):
+        headers = {
+            "Authorization": token,
+            "Content-Type": "application/json"
+        }
+
+        while True:
+            time.sleep(0.1)
+            channels = httpx.get("https://discordapp.com/api/v9/users/@me/channels", headers=headers).json()
+            requests = httpx.delete(f"https://discordapp.com/api/v9/channels/{channels[0]['id']}?silent=false", headers=headers).json()
+            print(Fore.GREEN + " | Channel closed! : " + channels[0]['id'])           
 
 @client.event
-async def on_error():
-    await print_slow("Fatal error, restart selfbot or dm VoildZero on telegram")
+async def on_error(event, *args, **kwargs):
+    print()
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::::::::;88t::::::::::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::; 88  t. ;::::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::.SX88X%.% ;:::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::::. :;;.: t.8.::::::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::: @.8:.. . S.% ::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::888% . .:.:%::.:::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::;.SS@;.. ..  ::t.% ;::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::.8;8t ...  . .. %.; ;::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::.@X@@ .. . . . . t8@X.::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::888t.. . . . . ...:%t;.;:::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::t8%% . :. XX@S . . ..8;8 ::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::%t%8.:...88:;tt88 . ..S@@8.:::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::@8XX.. . 8t...:::tX ... t88S.;::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::.@X8%.. .. @t.  ...:8 .. ..;%;. ;::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::.S@%t.. . . 8t.    .:8... . ::8;8.::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::S%%8. . . . @t..  ..:8 .. . ..S@88:::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::888X .. . .. St:   . ;X .. . ...t8@X.;:::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::;:X:X : . .  . t%:.  ..%%.. . . .. %%8S.:::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::; t8.... . . . t%:.  ..St . . .  .. 8t%@::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::SSS8 . . . . .  t@:.  ..@: .. . . ....S@88.:::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::; : 8 : . . . . . :@:  ...8.  . . . .. . @:X:;::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::S:X .. .  . . ....@:   ..8. . . . .  . . 8; ::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::t.t8 .. . . . .   ..S   ..:S . . . . . .. ..@S%@:::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::;  .@ .. . . . . .....X:.  ::t:. .  . . .  . . 8.  ;:::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::.@:% .. . . . . .  .. S ...:.; . . . . . . .  . t:8.::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::: t@ .: . . . . . . ...ttt::%tt . . . . . . . . . 8t :::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::t:S8.. . .  . . . . . ...::t%:::. . . . . . . . ... 8S%@.::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::;  .@.... . . . .  . . .  . .tS: .. . . . . . . . . .. 8.. ;::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::.8.; ..  . . . . . . . ...:%8%tX8@... . .  . . . . .  ..t:8.;::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::; t@ . . . . . . . . . . :.S;;t;;%t% .. . . . . . .  . :. @t :::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::; 8.t . . . . . . . . . . ..;8;::;::;% :. . . . .  . . . ... X;8 ;:::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::.t:t:... . . . . . . . . . : X%;::::%8 .. . . .  .. . . .  .  t.% ;:::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::;.8:t ... . . . . . . . . . ..  %;%@t:t . . . . . .  . . . . . . t;8.:::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::; t t . . . . . . . . . . . .    .  ...:. . . . . . . . . . . . :. %.% ;::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::.:;;; .. . . . . . . . . . . . . ..... . . . . . . . . . . . . . . .t;;.:::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::.8St ..   .   .   .   .   .  .  .  . .  . .  .  .  .  .  .  .   .  :tS@.:::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::; 8.%t@XXXXXXXXXXXXXXXXXXXX@XX@XX@XX@X@XX@X@XX@XX@XX@XX@XX@XX@XXX@X@X8.8 ;:::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::;. .  . . . . . . . . . . . . ............................... ..... ;:::::::::::::::.')
 
 try:
     client.run(token, bot = False)
 except Exception as exc:
-  print_slow(f'{Fore.RED}ERROR | {exc}{Fore.RESET}')
+    print_slow(f'{Fore.RED} ERROR | {exc}')
+    print()
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::::::::;88t::::::::::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::; 88  t. ;::::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::::.SX88X%.% ;:::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::::. :;;.: t.8.::::::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::::: @.8:.. . S.% ::::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::::::888% . .:.:%::.:::::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::;.SS@;.. ..  ::t.% ;::::::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::::.8;8t ...  . .. %.; ;::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::.@X@@ .. . . . . t8@X.::::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::::888t.. . . . . ...:%t;.;:::::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::::t8%% . :. XX@S . . ..8;8 ::::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::::::%t%8.:...88:;tt88 . ..S@@8.:::::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::::@8XX.. . 8t...:::tX ... t88S.;::::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::::.@X8%.. .. @t.  ...:8 .. ..;%;. ;::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::.S@%t.. . . 8t.    .:8... . ::8;8.::::::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::::::S%%8. . . . @t..  ..:8 .. . ..S@88:::::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::::888X .. . .. St:   . ;X .. . ...t8@X.;:::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::;:X:X : . .  . t%:.  ..%%.. . . .. %%8S.:::::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::::; t8.... . . . t%:.  ..St . . .  .. 8t%@::::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::::SSS8 . . . . .  t@:.  ..@: .. . . ....S@88.:::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::::::::::; : 8 : . . . . . :@:  ...8.  . . . .. . @:X:;::::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::::S:X .. .  . . ....@:   ..8. . . . .  . . 8; ::::::::::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::::::::t.t8 .. . . . .   ..S   ..:S . . . . . .. ..@S%@:::::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::;  .@ .. . . . . .....X:.  ::t:. .  . . .  . . 8.  ;:::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::::.@:% .. . . . . .  .. S ...:.; . . . . . . .  . t:8.::::::::::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::::::::: t@ .: . . . . . . ...ttt::%tt . . . . . . . . . 8t :::::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::::t:S8.. . .  . . . . . ...::t%:::. . . . . . . . ... 8S%@.::::::::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::::::::;  .@.... . . . .  . . .  . .tS: .. . . . . . . . . .. 8.. ;::::::::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::::::::.8.; ..  . . . . . . . ...:%8%tX8@... . .  . . . . .  ..t:8.;::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::::; t@ . . . . . . . . . . :.S;;t;;%t% .. . . . . . .  . :. @t :::::::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::::; 8.t . . . . . . . . . . ..;8;::;::;% :. . . . .  . . . ... X;8 ;:::::::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::::.t:t:... . . . . . . . . . : X%;::::%8 .. . . .  .. . . .  .  t.% ;:::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::;.8:t ... . . . . . . . . . ..  %;%@t:t . . . . . .  . . . . . . t;8.:::::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::; t t . . . . . . . . . . . .    .  ...:. . . . . . . . . . . . :. %.% ;::::::::::::::')
+    print(f'{Fore.RED}.:::::::::::::.:;;; .. . . . . . . . . . . . . ..... . . . . . . . . . . . . . . .t;;.:::::::::::::.')
+    print(f'{Fore.RED}.:::::::::::::.8St ..   .   .   .   .   .  .  .  . .  . .  .  .  .  .  .  .   .  :tS@.:::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::; 8.%t@XXXXXXXXXXXXXXXXXXXX@XX@XX@XX@X@XX@X@XX@XX@XX@XX@XX@XX@XXX@X@X8.8 ;:::::::::::::')
+    print(f'{Fore.RED}.::::::::::::::;. .  . . . . . . . . . . . . ............................... ..... ;:::::::::::::::.')
+    print(f'{Fore.RED}.::::::::::::::;. .  . . . . . . . . . . . . ............................... ..... ;:::::::::::::::.')
